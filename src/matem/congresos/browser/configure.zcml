@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="matem.congresos">
+
+  <include package="plone.app.contentmenu" />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+  <browser:page
+      for="*"
+      name="congresos_view"
+      class=".congresosview.congresosView"
+      template="congresosview.pt"
+      allowed_interface=".congresosview.IcongresosView"
+      permission="zope.Public"
+      />
+
+
+</configure>

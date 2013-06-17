@@ -1,0 +1,18 @@
+Changelog
+=========
+
+1.1 (2011-03-08)
+----------------
+
+- Add test and Date fields
+
+1.0.1 (2010-08-24)
+-------------------
+
+- Added documentation (sphinx format) 
+
+1.0 (2010-08-10)
+-----------------
+
+- Created recipe with ZopeSkel ["Mónica Leñero"].
+
