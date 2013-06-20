@@ -54,6 +54,9 @@
             <tal:block tal:repeat="item folderContents">
                 <div class="tileItem visualIEFloatFix vevent" 
                      tal:define="item_url item/getURL|item/absolute_url;
+                                      normalizeString nocall:context/@@plone/normalizeString;
+                                      isAnon context/@@plone_portal_state/anonymous;
+                                      toLocalizedTime nocall:context/@@plone/toLocalizedTime;
                                        item_id item/getId|item/id;
                                        item_title_or_id item/pretty_title_or_id;
                                        item_description item/Description;
