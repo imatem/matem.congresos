@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  i18n:domain="UNAM.imateCVct">
+  <head>
+
+  </head>
+  <body>
+    <div id="content-core">
+      <div class="fc" tal:define="activities view/semanaryCongress;
+                              start_date activities/start_date;
+                              end_date activities/end_date;
+
+
+                              ">
+      <h1>Otras actividades del Instituto de Matemáticas, UNAM</h1>
+      <h3>Periodo: <span tal:content="start_date"/> al <span tal:content="end_date"/></h3>
+      <h2>Congresos</h2>
+      </div>
+    </div>
+  </body>
+</html>
