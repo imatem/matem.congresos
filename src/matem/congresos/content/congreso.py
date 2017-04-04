@@ -16,6 +16,10 @@ from Products.ATContentTypes import ATCTMessageFactory as _
 from matem.congresos.interfaces import ICongreso
 from matem.congresos.config import PROJECTNAME
 
+from Products.DataGridField import DataGridField
+from Products.DataGridField import DataGridWidget
+from collective.datagridcolumns.DateColumn import DateColumn
+
 CongresoSchema = newsitem.ATNewsItemSchema.copy() + atapi.Schema((
     DateTimeField('startDate',
                   required=True,
@@ -55,6 +59,38 @@ CongresoSchema = newsitem.ATNewsItemSchema.copy() + atapi.Schema((
                                             "Add http:// for external links."),
                         label = _(u'label_event_url', default=u'Event URL'),
                         )),
+
+    StringField('eventplace',
+                required=False,
+                searchable=False,
+                # accessor='event_url',
+                write_permission=ChangeEvents,
+                # validators=('isURL', ),
+                widget=StringWidget(
+                    description=_(u'help_event_place', default=u"Indicate the Event place"),
+                    label=_(u'label_event_place', default=u'Event Place'),
+                )),
+
+    DataGridField(
+        name='semanarydates',
+        columns=('semdate',),
+        write_permission=ChangeEvents,
+        widget=DataGridWidget(
+            label=_(u"label_widget_semanarydates", default=u"Dates for include in the semanary"),
+            # helper_js=('datagridwidget.js', 'datagriddatepicker.js', 'datagrid_course.js'),
+            # helper_js=('datagridwidget.js', 'datagridwidget_patches.js', 'datagridmultiselect.js',),
+            helper_js=('datagridwidget.js', 'datagriddatepicker.js',),
+            columns={
+                'semdate': DateColumn(
+                    _(u"semanarydate_label", default=u"Date for include in the semanary <dd/mm/yyyy>, Be careful the date is consider for the semanary"),
+                    date_format='dd/mm/yy',
+                ),
+            },
+        ),
+    ),
+
+
+
 ))
 
 # Set storage on fields copied from ATContentTypeSchema, making sure
@@ -68,6 +104,8 @@ schemata.finalizeATCTSchema(CongresoSchema, moveDiscussion=False)
 CongresoSchema.moveField('startDate', after='description')
 CongresoSchema.moveField('endDate', after='startDate')
 CongresoSchema.moveField('eventUrl', after='endDate')
+CongresoSchema.moveField('eventplace', after='eventUrl')
+CongresoSchema.moveField('semanarydates', after='eventplace')
 
 
 class Congreso(newsitem.ATNewsItem):
