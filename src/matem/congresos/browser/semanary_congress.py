@@ -3,6 +3,7 @@ from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 from zope.component.hooks import getSite
+import datetime
 
 
 class SemanaryCongressView(BrowserView):
@@ -17,9 +18,18 @@ class SemanaryCongressView(BrowserView):
         """."""
         return getToolByName(getSite(), 'portal_catalog')
 
+    def getNextFriday(self):
+        today = datetime.date.today()  # DateTime()
+        friday = today + datetime.timedelta((4 - today.weekday()) % 7)
+        return friday
+
+
     def semanaryCongress(self):
-        ftoday = DateTime()
-        today = DateTime('/'.join([str(ftoday.year()), str(ftoday.month()), str(ftoday.day())]))
+        ftoday = self.getNextFriday()
+        today = DateTime('/'.join([str(ftoday.year), str(ftoday.month), str(ftoday.day)]))
+        # ftoday = DateTime()
+        # today = DateTime('/'.join([str(ftoday.year()), str(ftoday.month()), str(ftoday.day())]))
+
         start_date = today + 1
         end_date = today + 7.9999
 
