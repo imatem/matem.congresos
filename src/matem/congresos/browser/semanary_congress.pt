@@ -11,14 +11,22 @@
                               start_date activities/start_date;
                               end_date activities/end_date;
                               congress activities/congress;
-
-
                               ">
       <h1>Otras actividades del Instituto de Matemáticas, UNAM</h1>
       <h3>Periodo: <span tal:content="start_date"/> al <span tal:content="end_date"/></h3>
-      <tal:block tal:repeat="item congress">
-        <span tal:content="item"/><br/>
-      </tal:block>
+      <ul>
+        <li tal:repeat="item congress">
+          <a href="" tal:attributes="href item/url">
+            <span tal:content="item/title | nothing"/>
+          </a>
+          <br/>
+          <span tal:content="item/start | nothing"/> - <span tal:content="item/end | nothing"/>
+          <tal:block tal:condition="item/place | nothing">
+            <br/><span tal:content="item/place | nothing"/>
+          </tal:block>
+          <br/>
+        </li>
+      </ul>
 
       </div>
     </div>

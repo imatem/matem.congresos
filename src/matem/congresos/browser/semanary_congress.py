@@ -23,7 +23,6 @@ class SemanaryCongressView(BrowserView):
         friday = today + datetime.timedelta((4 - today.weekday()) % 7)
         return friday
 
-
     def semanaryCongress(self):
         ftoday = self.getNextFriday()
         today = DateTime('/'.join([str(ftoday.year), str(ftoday.month), str(ftoday.day)]))
@@ -55,11 +54,26 @@ class SemanaryCongressView(BrowserView):
             dates = obj.getSemanarydates()
             for itemdates in dates:
                 itemdate = itemdates.get('semdate', '')
+                data = {}
                 if itemdate:
                     effectivedate = DateTime(itemdate, datefmt='MX')
                     if effectivedate >= start_date and effectivedate <= end_date:
                         title = obj.Title()
-                        congress.append(title)
+                        dstart = obj.start()
+                        dend = obj.end()
+                        place = obj.getEventplace()
+                        url = obj.event_url()
+                        if title:
+                            data['title'] = title
+                        if dstart:
+                            data['start'] = '/'.join([str(dstart.day()), str(dstart.month()), str(dstart.year())])
+                        if dend:
+                            data['end'] = '/'.join([str(dend.day()), str(dend.month()), str(dend.year())])
+                        if place:
+                            data['place'] = place
+                        if url:
+                            data['url'] = url
+                        congress.append(data)
                         break
 
         return {
