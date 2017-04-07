@@ -10,6 +10,8 @@
 
   <cmf:registerDirectory name="matem_congresos"/>
 
+  <i18n:registerTranslations directory="locales" />
+
   <!-- Include the sub-packages that use their own configure.zcml files. -->
   <include package=".browser" />
   <include package=".content" />

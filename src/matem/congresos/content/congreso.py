@@ -12,13 +12,16 @@ from zope.interface import implements
 from Products.Archetypes import atapi
 from Products.ATContentTypes.content import schemata
 from Products.ATContentTypes.content import newsitem
-from Products.ATContentTypes import ATCTMessageFactory as _
+
+from matem.congresos import congresosMessageFactory as _
 from matem.congresos.interfaces import ICongreso
 from matem.congresos.config import PROJECTNAME
 
 from Products.DataGridField import DataGridField
 from Products.DataGridField import DataGridWidget
 from collective.datagridcolumns.DateColumn import DateColumn
+
+
 
 CongresoSchema = newsitem.ATNewsItemSchema.copy() + atapi.Schema((
     DateTimeField('startDate',
@@ -69,6 +72,7 @@ CongresoSchema = newsitem.ATNewsItemSchema.copy() + atapi.Schema((
                 widget=StringWidget(
                     description=_(u'help_event_place', default=u"Indicate the Event place"),
                     label=_(u'label_event_place', default=u'Event Place'),
+                    i18n_domain='matem.congresos',
                 )),
 
     DataGridField(
@@ -77,8 +81,7 @@ CongresoSchema = newsitem.ATNewsItemSchema.copy() + atapi.Schema((
         write_permission=ChangeEvents,
         widget=DataGridWidget(
             label=_(u"label_widget_semanarydates", default=u"Dates for include in the semanary"),
-            # helper_js=('datagridwidget.js', 'datagriddatepicker.js', 'datagrid_course.js'),
-            # helper_js=('datagridwidget.js', 'datagridwidget_patches.js', 'datagridmultiselect.js',),
+            i18n_domain='matem.congresos',
             helper_js=('datagridwidget.js', 'datagriddatepicker.js', 'datagridwidget_patches.js'),
             columns={
                 'semdate': DateColumn(
