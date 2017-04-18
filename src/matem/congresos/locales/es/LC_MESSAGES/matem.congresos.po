@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2017-04-06 17:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: matem/congresos/profiles/default/types/Congreso.xml
+msgid "Congreso"
+msgstr ""
+
+#: matem/congresos/configure.zcml:26
+msgid "Congresos"
+msgstr ""
+
+#: matem/congresos/configure.zcml:26
+#: matem/congresos/profiles/default/types/Congreso.xml
+msgid "Enlace con imagen"
+msgstr ""
+
+#: matem/congresos/browser/congresosview.py:40
+msgid "a dummy string"
+msgstr ""
+
+#. Default: "Indicate the Event place"
+#: matem/congresos/content/congreso.py:72
+msgid "help_event_place"
+msgstr "Indica el lugar de la actividad"
+
+#. Default: "Web address with more info about the event. Add http:// for external links."
+#: matem/congresos/content/congreso.py:59
+msgid "help_event_url"
+msgstr "Dirección web con más información sobre el evento. Agregue http:// para los enlaces externos."
+
+#. Default: "Event Ends"
+#: matem/congresos/content/congreso.py:48
+msgid "label_event_end"
+msgstr "Fin del Evento"
+
+#. Default: "Event Place"
+#: matem/congresos/content/congreso.py:73
+msgid "label_event_place"
+msgstr "Lugar del Evento"
+
+#. Default: "Event Starts"
+#: matem/congresos/content/congreso.py:35
+msgid "label_event_start"
+msgstr "Inicio del Evento"
+
+#. Default: "Event URL"
+#: matem/congresos/content/congreso.py:62
+msgid "label_event_url"
+msgstr "URL del evento"
+
+#. Default: "Dates for include in the semanary"
+#: matem/congresos/content/congreso.py:82
+msgid "label_widget_semanarydates"
+msgstr "Fechas para incluir en el semanario"
+
+#. Default: "Date for include in the semanary <dd/mm/yyyy>, Be careful the date is consider for the semanary"
+#: matem/congresos/content/congreso.py:87
+msgid "semanarydate_label"
+msgstr "Fecha semanario <dd/mm/yyyy>, por favor sea cuidadoso las fechas almacenadas serán consideradas para incluir en el semanario"

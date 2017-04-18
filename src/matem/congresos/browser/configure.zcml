@@ -16,5 +16,13 @@
       permission="zope.Public"
       />
 
+  <browser:page
+        name="semanarycongress"
+        for="*"
+        permission="zope.Public"
+        template="semanary_congress.pt"
+        class=".semanary_congress.SemanaryCongressView"
+    />
+
 
 </configure>
