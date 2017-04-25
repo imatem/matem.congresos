@@ -8,9 +8,9 @@
   <body>
     <div id="content-core">
       <div class="fc" tal:define="activities view/semanaryCongress;
-                              start_date activities/start_date;
-                              end_date activities/end_date;
-                              congress activities/congress;
+                              start_date activities/start_date | nothing;
+                              end_date activities/end_date | nothing;
+                              congress activities/congress | nothing;
                               ">
       <h1>Otras actividades del Instituto de Matemáticas, UNAM</h1>
       <h3>Periodo: <span tal:content="start_date"/> al <span tal:content="end_date"/></h3>
