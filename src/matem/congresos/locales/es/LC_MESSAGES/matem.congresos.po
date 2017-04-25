@@ -64,9 +64,9 @@ msgstr "URL del evento"
 #. Default: "Dates for include in the semanary"
 #: matem/congresos/content/congreso.py:82
 msgid "label_widget_semanarydates"
-msgstr "Fechas para incluir en el semanario"
+msgstr "Fecha(s) en que se desea se anuncie en el semanario"
 
 #. Default: "Date for include in the semanary <dd/mm/yyyy>, Be careful the date is consider for the semanary"
 #: matem/congresos/content/congreso.py:87
 msgid "semanarydate_label"
-msgstr "Fecha semanario <dd/mm/yyyy>, por favor sea cuidadoso las fechas almacenadas serán consideradas para incluir en el semanario"
+msgstr "Fecha <dd/mm/yyyy> en la que será incuido en el semanario, recuerde que el semanario es enviado todos los viernes, con las actividades de la próxima semana"
