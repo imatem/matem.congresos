@@ -79,10 +79,12 @@ CongresoSchema = newsitem.ATNewsItemSchema.copy() + atapi.Schema((
         name='semanarydates',
         columns=('semdate',),
         write_permission=ChangeEvents,
+        allow_reorder=False,
         widget=DataGridWidget(
             label=_(u"label_widget_semanarydates", default=u"Dates for include in the semanary"),
             i18n_domain='matem.congresos',
-            helper_js=('datagridwidget.js', 'datagriddatepicker.js', 'datagridwidget_patches.js'),
+            helper_js=('datagridwidget.js', 'datagridwidget_patches.js', 'datagriddatepicker.js',),
+            helper_css=('datagridwidget.css', 'congresos.css',),
             columns={
                 'semdate': DateColumn(
                     _(u"semanarydate_label", default=u"Date for include in the semanary <dd/mm/yyyy>, Be careful the date is consider for the semanary"),
