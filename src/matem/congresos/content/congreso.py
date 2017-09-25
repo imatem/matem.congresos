@@ -132,5 +132,26 @@ class Congreso(newsitem.ATNewsItem):
         url = '<a href="%s"> %s </a>' % (self.event_url(), self.event_url())
         return '%s <br/> %s' % (self.description, url)
 
+    def post_validate(self, REQUEST=None, errors=None):
+
+        rstartDate = REQUEST.get('startDate', None)
+        rendDate = REQUEST.get('endDate', None)
+
+        try:
+            end = DateTime(rendDate)
+        except Exception:
+            errors['endDate'] = u'La fecha de término no es valida'
+
+        try:
+            start = DateTime(rstartDate)
+        except Exception:
+            errors['startDate'] = u'La fecha de inicio no es valida'
+
+        if 'startDate' in errors or 'endDate' in errors:
+            return
+
+        if start > end:
+            errors['endDate'] = u'La fecha de término debe ser posterior a la de inicio'
+
 
 atapi.registerType(Congreso, PROJECTNAME)
