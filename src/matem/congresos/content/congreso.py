@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Products.Archetypes.atapi import DateTimeField
 from Products.Archetypes.atapi import StringWidget
 from Products.Archetypes.atapi import CalendarWidget
@@ -92,6 +93,7 @@ CongresoSchema = newsitem.ATNewsItemSchema.copy() + atapi.Schema((
                 ),
             },
         ),
+        default=({'semdate': ''}, ),
     ),
 
 
@@ -129,5 +131,6 @@ class Congreso(newsitem.ATNewsItem):
             return self.description
         url = '<a href="%s"> %s </a>' % (self.event_url(), self.event_url())
         return '%s <br/> %s' % (self.description, url)
+
 
 atapi.registerType(Congreso, PROJECTNAME)
