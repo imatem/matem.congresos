@@ -63,6 +63,7 @@ class SemanaryCongressView(BrowserView):
                         dend = obj.end()
                         place = obj.getEventplace()
                         url = obj.event_url()
+                        image = obj.getImage()
                         if title:
                             data['title'] = title
                         if dstart:
@@ -73,6 +74,9 @@ class SemanaryCongressView(BrowserView):
                             data['place'] = place
                         if url:
                             data['url'] = url
+                        if image:
+                            data['image'] = obj.absolute_url()  # + '/image_mini'
+
                         congress.append(data)
                         break
 

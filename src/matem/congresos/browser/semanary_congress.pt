@@ -16,6 +16,10 @@
       <h3>Periodo: <span tal:content="start_date"/> al <span tal:content="end_date"/></h3>
       <ul>
         <li tal:repeat="item congress">
+          <tal:block tal:condition="item/image | nothing">
+            <img tal:attributes="src python:item['image'] + '/image_mini'"/>
+            <br/>
+          </tal:block>
           <a href="" tal:attributes="href item/url">
             <span tal:content="item/title | nothing"/>
           </a>
