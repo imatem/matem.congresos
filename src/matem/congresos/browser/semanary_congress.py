@@ -57,7 +57,7 @@ class SemanaryCongressView(BrowserView):
                 data = {}
                 if itemdate:
                     effectivedate = DateTime(itemdate, datefmt='MX')
-                    if effectivedate >= start_date and effectivedate <= end_date:
+                    if effectivedate >= start_date and effectivedate <= end_date and obj.end() >= start_date:
                         title = obj.Title()
                         dstart = obj.start()
                         dend = obj.end()
