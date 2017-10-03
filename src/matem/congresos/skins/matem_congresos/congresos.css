@@ -1,3 +1,9 @@
 .datagridwidget-add-button{
     display: none;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 50%));
+    grid-gap: 2rem;
+}
