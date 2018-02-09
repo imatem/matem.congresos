@@ -29,8 +29,8 @@ class SemanaryCongressView(BrowserView):
         # ftoday = DateTime()
         # today = DateTime('/'.join([str(ftoday.year()), str(ftoday.month()), str(ftoday.day())]))
 
-        start_date = today + 1
-        end_date = today + 7.9999
+        start_date = today
+        end_date = today + 7
 
         iso_start = start_date.ISO().split('-')
         day_start = iso_start[2].split('T')
@@ -46,7 +46,6 @@ class SemanaryCongressView(BrowserView):
             'sort_on': 'start',
 
         }
-
         brains = self.portal_catalog.searchResults(query)
         congress = []
         for brain in brains:
