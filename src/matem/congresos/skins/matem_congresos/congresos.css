@@ -1,3 +1,27 @@
 .datagridwidget-add-button{
     display: none;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+/*  *  900px and below * */
+@media screen and (max-width : 900px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+    }
+}
+
+/*  *  600px and below * */
+@media screen and (max-width : 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+}
