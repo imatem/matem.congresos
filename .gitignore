@@ -1,26 +1,35 @@
-# byte-compiled Python files
-*.py[co]
-
-
-# Packages
-bin
-develop-eggs
-eggs
-parts
-src/matem.congresos.egg-info/
-var
-.installed.cfg
-Makefile
-
-# Unit test / coverage reports
 .coverage
-coverage
-
-# Translations
+*.egg-info
+*.log
 *.mo
-
-# Mr Developer
+*.py?
+*.swp
+# dirs
+bin/
+buildout-cache/
+develop-eggs/
+eggs/
+htmlcov/
+include/
+lib/
+local/
+parts/
+src/*
+test.plone_addon/
+var/
+# files
+.installed.cfg
 .mr.developer.cfg
-
-# SublimeCodeIntel
-.codeintel
+lib64
+log.html
+output.xml
+pip-selfcheck.json
+report.html
+# excludes
+!.coveragerc
+!.editorconfig
+!.gitattributes
+!.gitignore
+!.gitkeep
+!.travis.yml
+!src/collective

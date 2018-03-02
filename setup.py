@@ -10,7 +10,7 @@ setup(
     long_description=open('README.txt').read() + '\n' +
     open('docs/CHANGES.txt').read(),
     # Get more strings from
-    #http://www.python.org/pypi?%3Aaction=list_classifiers
+    # http://www.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Plone',
@@ -19,9 +19,9 @@ setup(
         'Programming Language :: Python',
     ],
     platforms='Any',
-    author='Gildardo Bautista',
-    author_email='gil@matem.unam.mx',
-    url='http://www.matem.unam.mx',
+    author='Informática Académica',
+    author_email='informatica.academica@im.unam.mx',
+    url='https://github.com/imatem/matem.congresos',
     license='GPL',
     namespace_packages=['matem'],
     packages=find_packages('src', exclude=['ez_setup']),
@@ -33,15 +33,9 @@ setup(
     ],
     extras_require={
         'develop': [
-            'flake8',
-            'jarn.mkrelease',
-            'manuel',
-            'Sphinx',
-            'zest.releaser',
         ],
         'test': [
             'plone.app.testing',
-            'unittest2',
         ],
     },
     entry_points="""
