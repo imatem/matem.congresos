@@ -7,7 +7,7 @@ setup(
     name='matem.congresos',
     version=version,
     description="Congres type for the Institute of Mathematics",
-    long_description=open('README.txt').read() + '\n' +
+    long_description=open('README.rst').read() + '\n' +
     open('docs/CHANGES.txt').read(),
     # Get more strings from
     # http://www.python.org/pypi?%3Aaction=list_classifiers
