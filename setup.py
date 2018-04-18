@@ -29,7 +29,11 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
+        'plone.api',
         'setuptools',
+        'Products.DataGridField',
+        'collective.datagridcolumns',
+        'collective.z3cform.datagridfield',
     ],
     extras_require={
         'develop': [
