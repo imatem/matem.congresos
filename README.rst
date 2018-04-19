@@ -2,15 +2,6 @@
 matem.congresos
 ===================
 
-.. image:: https://travis-ci.org/imatem/collective.judgment.svg?branch=master
-    :target: https://travis-ci.org/imatem/collective.judgment
-    :alt: Travis CI status
-
-.. image:: https://coveralls.io/repos/github/imatem/collective.judgment/badge.svg?branch=master
-    :target: https://coveralls.io/github/imatem/collective.judgment?branch=master
-    :alt: Coveralls status
-
-
 Congress content type
 
 Features
