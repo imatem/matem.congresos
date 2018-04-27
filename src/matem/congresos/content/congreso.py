@@ -80,7 +80,7 @@ CongresoSchema = newsitem.ATNewsItemSchema.copy() + atapi.Schema((
         name='semanarydates',
         columns=('semdate',),
         write_permission=ChangeEvents,
-        allow_reorder=False,
+        # allow_reorder=False,
         widget=DataGridWidget(
             label=_(u"label_widget_semanarydates", default=u"Dates for include in the semanary"),
             i18n_domain='matem.congresos',
@@ -92,6 +92,7 @@ CongresoSchema = newsitem.ATNewsItemSchema.copy() + atapi.Schema((
                     date_format='dd/mm/yy',
                 ),
             },
+            visible={'edit': 'invisible'},
         ),
         default=({'semdate': ''}, ),
     ),
@@ -124,7 +125,6 @@ class Congreso(newsitem.ATNewsItem):
 
     title = atapi.ATFieldProperty('title')
     description = atapi.ATFieldProperty('description')
-    url = atapi.ATFieldProperty('meetingUrl')
 
     def Description(self):
         if not self.event_url():
