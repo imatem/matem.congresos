@@ -8,6 +8,7 @@
 bin/
 buildout-cache/
 develop-eggs/
+docs/build/
 eggs/
 htmlcov/
 include/
@@ -32,4 +33,4 @@ report.html
 !.gitignore
 !.gitkeep
 !.travis.yml
-!src/collective
+!src/matem
