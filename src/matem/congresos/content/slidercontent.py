@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from matem.congresos import _
+# from matem.congresos import _
+from matem.congresos import congresosMessageFactory as _
 # from matem.annualreport.validators import isValidFileType
 # from matem.annualreport.validators import validatesinged
 # from plone import api
@@ -15,7 +16,7 @@ from zope import schema
 # from zope.i18n import translate
 
 
-class SliderContent(model.Schema):
+class ISliderContent(model.Schema):
     """Dexterity-schema for activities in slider"""
 
     title = schema.TextLine(
@@ -30,11 +31,11 @@ class SliderContent(model.Schema):
     )
 
     image = namedfile.NamedBlobImage(
-        title=_(u'ImageThumb'),
+        title=_(u'Image'),
         required=True,
     )
 
-    urlevent = schema.TextLine(
-        title=_(u'Url event'),
+    urlevent = schema.URI(
+        title=_(u'Url Event'),
         required=False,
     )
