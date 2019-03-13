@@ -23,7 +23,7 @@
   <property name="behaviors">
     <element value="plone.app.content.interfaces.INameFromTitle"/>
   </property>
-  <property name="schema">matem.congresos.content.slidercontent.SliderContent</property>
+  <property name="schema">matem.congresos.content.slidercontent.ISliderContent</property>
   <property name="model_source"></property>
   <property name="model_file"></property>
   <property name="schema_policy">dexterity</property>

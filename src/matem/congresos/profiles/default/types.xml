@@ -7,6 +7,6 @@
      which supports Plone's "display" menu.
   -->
 <object name="portal_types" meta_type="Plone Types Tool">
-  <object name="Congreso"
-    meta_type="Factory-based Type Information with dynamic views" />
+  <object name="Congreso" meta_type="Factory-based Type Information with dynamic views" />
+  <object name="SliderContent" meta_type="Dexterity FTI"/>
 </object>
