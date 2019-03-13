@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-03-13 22:02+0000\n"
+"POT-Creation-Date: 2019-03-13 22:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,8 +31,24 @@ msgstr ""
 msgid "Enlace con imagen"
 msgstr ""
 
+#: matem/congresos/profiles/default/workflows/matem_congresos_slider_content_workflow/definition.xml
+msgid "Front Page"
+msgstr ""
+
 #: matem/congresos/content/slidercontent.py:22
 msgid "Image"
+msgstr ""
+
+#: matem/congresos/profiles/default/workflows/matem_congresos_slider_content_workflow/definition.xml
+msgid "Private"
+msgstr ""
+
+#: matem/congresos/profiles/default/workflows/matem_congresos_slider_content_workflow/definition.xml
+msgid "Publish in Front Page"
+msgstr ""
+
+#: matem/congresos/profiles/default/workflows/matem_congresos_slider_content_workflow/definition.xml
+msgid "Retract"
 msgstr ""
 
 #: matem/congresos/profiles/default/types/SliderContent.xml
