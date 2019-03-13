@@ -27,3 +27,8 @@ class ISliderContent(model.Schema):
         title=_(u'Url Event'),
         required=False,
     )
+
+    start = schema.Date(
+        title=_(u'Start date of the event'),
+        required=True,
+    )
