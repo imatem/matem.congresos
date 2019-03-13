@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-04-06 17:00+0000\n"
+"POT-Creation-Date: 2019-03-13 22:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,9 +22,33 @@ msgstr ""
 msgid "Congresos"
 msgstr ""
 
+#: matem/congresos/content/slidercontent.py:17
+msgid "Description"
+msgstr ""
+
 #: matem/congresos/configure.zcml:26
 #: matem/congresos/profiles/default/types/Congreso.xml
 msgid "Enlace con imagen"
+msgstr ""
+
+#: matem/congresos/content/slidercontent.py:22
+msgid "Image"
+msgstr ""
+
+#: matem/congresos/profiles/default/types/SliderContent.xml
+msgid "Slider Content"
+msgstr ""
+
+#: matem/congresos/content/slidercontent.py:32
+msgid "Start date of the event"
+msgstr ""
+
+#: matem/congresos/content/slidercontent.py:11
+msgid "Title"
+msgstr ""
+
+#: matem/congresos/content/slidercontent.py:27
+msgid "Url Event"
 msgstr ""
 
 #: matem/congresos/browser/congresosview.py:40
@@ -32,41 +56,41 @@ msgid "a dummy string"
 msgstr ""
 
 #. Default: "Indicate the Event place"
-#: matem/congresos/content/congreso.py:72
+#: matem/congresos/content/congreso.py:74
 msgid "help_event_place"
 msgstr ""
 
 #. Default: "Web address with more info about the event. Add http:// for external links."
-#: matem/congresos/content/congreso.py:59
+#: matem/congresos/content/congreso.py:61
 msgid "help_event_url"
 msgstr ""
 
 #. Default: "Event Ends"
-#: matem/congresos/content/congreso.py:48
+#: matem/congresos/content/congreso.py:50
 msgid "label_event_end"
 msgstr ""
 
 #. Default: "Event Place"
-#: matem/congresos/content/congreso.py:73
+#: matem/congresos/content/congreso.py:75
 msgid "label_event_place"
 msgstr ""
 
 #. Default: "Event Starts"
-#: matem/congresos/content/congreso.py:35
+#: matem/congresos/content/congreso.py:37
 msgid "label_event_start"
 msgstr ""
 
 #. Default: "Event URL"
-#: matem/congresos/content/congreso.py:62
+#: matem/congresos/content/congreso.py:64
 msgid "label_event_url"
 msgstr ""
 
 #. Default: "Dates for include in the semanary"
-#: matem/congresos/content/congreso.py:82
+#: matem/congresos/content/congreso.py:85
 msgid "label_widget_semanarydates"
 msgstr ""
 
 #. Default: "Date for include in the semanary <dd/mm/yyyy>, Be careful the date is consider for the semanary"
-#: matem/congresos/content/congreso.py:87
+#: matem/congresos/content/congreso.py:91
 msgid "semanarydate_label"
 msgstr ""
