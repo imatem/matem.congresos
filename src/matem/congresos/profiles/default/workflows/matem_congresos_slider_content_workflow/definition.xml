@@ -86,7 +86,6 @@
  <variable variable_id="action" for_catalog="False" for_status="True" update_always="True">
   <description>Previous transition</description>
   <default>
-   
    <expression>transition/getId|nothing</expression>
   </default>
   <guard>
@@ -96,7 +95,6 @@
   <description>The ID of the user who performed the last transition
 </description>
   <default>
-   
    <expression>user/getId</expression>
   </default>
   <guard>
@@ -106,7 +104,6 @@
   <description>Comment about the last transition
 </description>
   <default>
-   
    <expression>python:state_change.kwargs.get('comment', '')</expression>
   </default>
   <guard>
@@ -116,7 +113,6 @@
   <description>Provides access to workflow history
 </description>
   <default>
-   
    <expression>state_change/getHistory</expression>
   </default>
   <guard>
@@ -128,7 +124,6 @@
   <description>When the previous transition was performed
 </description>
   <default>
-   
    <expression>state_change/getDateTime</expression>
   </default>
   <guard>
