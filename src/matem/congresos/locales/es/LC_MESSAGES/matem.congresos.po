@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-04-06 17:00+0000\n"
+"POT-Creation-Date: 2019-03-13 22:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,57 +16,97 @@ msgstr ""
 
 #: matem/congresos/profiles/default/types/Congreso.xml
 msgid "Congreso"
-msgstr ""
+msgstr "Congreso"
 
 #: matem/congresos/configure.zcml:26
 msgid "Congresos"
-msgstr ""
+msgstr "Congresos"
+
+#: matem/congresos/content/slidercontent.py:17
+msgid "Description"
+msgstr "Descripción"
 
 #: matem/congresos/configure.zcml:26
 #: matem/congresos/profiles/default/types/Congreso.xml
 msgid "Enlace con imagen"
 msgstr ""
 
+#: matem/congresos/profiles/default/workflows/matem_congresos_slider_content_workflow/definition.xml
+msgid "Front Page"
+msgstr "Página principal"
+
+#: matem/congresos/content/slidercontent.py:22
+msgid "Image"
+msgstr "Imagen"
+
+#: matem/congresos/profiles/default/workflows/matem_congresos_slider_content_workflow/definition.xml
+msgid "Private"
+msgstr "Privado"
+
+#: matem/congresos/profiles/default/workflows/matem_congresos_slider_content_workflow/definition.xml
+msgid "Publish in Front Page"
+msgstr "Publicar en página principal"
+
+#: matem/congresos/profiles/default/workflows/matem_congresos_slider_content_workflow/definition.xml
+msgid "Retract"
+msgstr "Hacer privado"
+
+#: matem/congresos/profiles/default/types/SliderContent.xml
+msgid "Slider Content"
+msgstr "Contenido para girar"
+
+#: matem/congresos/content/slidercontent.py:32
+msgid "Start date of the event"
+msgstr "Fecha de inicio del evento"
+
+#: matem/congresos/content/slidercontent.py:11
+msgid "Title"
+msgstr "Título"
+
+#: matem/congresos/content/slidercontent.py:27
+msgid "Url Event"
+msgstr "URL del evento"
+
 #: matem/congresos/browser/congresosview.py:40
 msgid "a dummy string"
 msgstr ""
 
 #. Default: "Indicate the Event place"
-#: matem/congresos/content/congreso.py:72
+#: matem/congresos/content/congreso.py:74
 msgid "help_event_place"
 msgstr "Indica el lugar de la actividad"
 
 #. Default: "Web address with more info about the event. Add http:// for external links."
-#: matem/congresos/content/congreso.py:59
+#: matem/congresos/content/congreso.py:61
 msgid "help_event_url"
 msgstr "Dirección web con más información sobre el evento. Agregue http:// para los enlaces externos."
 
 #. Default: "Event Ends"
-#: matem/congresos/content/congreso.py:48
+#: matem/congresos/content/congreso.py:50
 msgid "label_event_end"
 msgstr "Fin del Evento"
 
 #. Default: "Event Place"
-#: matem/congresos/content/congreso.py:73
+#: matem/congresos/content/congreso.py:75
 msgid "label_event_place"
 msgstr "Lugar del Evento"
 
 #. Default: "Event Starts"
-#: matem/congresos/content/congreso.py:35
+#: matem/congresos/content/congreso.py:37
 msgid "label_event_start"
 msgstr "Inicio del Evento"
 
 #. Default: "Event URL"
-#: matem/congresos/content/congreso.py:62
+#: matem/congresos/content/congreso.py:64
 msgid "label_event_url"
 msgstr "URL del evento"
 
 #. Default: "Dates for include in the semanary"
-#: matem/congresos/content/congreso.py:82
+#: matem/congresos/content/congreso.py:85
 msgid "label_widget_semanarydates"
 msgstr "Fecha(s) en que se desea se anuncie en el semanario"
 
 #. Default: "Date for include in the semanary <dd/mm/yyyy>, Be careful the date is consider for the semanary"
-#: matem/congresos/content/congreso.py:87
+#: matem/congresos/content/congreso.py:91
 msgid "semanarydate_label"
 msgstr "Fecha <dd/mm/yyyy> en la que será incuido en el semanario, recuerde que el semanario es enviado todos los viernes, con las actividades de la próxima semana"

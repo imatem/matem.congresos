@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import unittest
 from zope.interface.verify import verifyObject
 from DateTime import DateTime
@@ -18,7 +19,7 @@ from matem.congresos.tests.base import TestCase
 
 EV_URL = 'http://example.org/'
 S_DATE = DateTime()
-E_DATE = DateTime()+1
+E_DATE = DateTime() + 1
 TEXT = "lorem ipsum"
 
 

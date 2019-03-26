@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<object name="portal_workflow" meta_type="Plone Workflow Tool">
+  <object name="matem_congresos_slider_content_workflow" meta_type="Workflow"/>
+
+ <bindings>
+    <type type_id="SliderContent">
+      <bound-workflow workflow_id="matem_congresos_slider_content_workflow"/>
+    </type>
+ </bindings>
+</object>
