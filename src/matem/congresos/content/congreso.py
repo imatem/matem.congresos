@@ -153,5 +153,7 @@ class Congreso(newsitem.ATNewsItem):
         if start > end:
             errors['endDate'] = u'La fecha de término debe ser posterior a la de inicio'
 
+    def prety_date(self):
+        return "Del %s al %s de %s de %s" % (self.startDate.day(), self.endDate.day(), self.endDate.Month(), self.endDate.year())
 
 atapi.registerType(Congreso, PROJECTNAME)
