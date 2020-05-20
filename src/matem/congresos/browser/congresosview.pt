@@ -18,6 +18,12 @@
 
         <div tal:replace="structure provider:plone.abovecontenttitle" />
 
+
+        <div class="main-container-grid">
+
+
+          <div>
+
         <h1 class="documentFirstHeading">
             <metal:field use-macro="python:here.widget('title', mode='view')">
             Title
@@ -26,8 +32,9 @@
 
         <div tal:replace="structure provider:plone.belowcontenttitle" />
 
-        <div class="main-container-grid">
-          <div>
+
+
+
             <div class="documentDescription"
                  tal:content="structure here/Description">
               description
@@ -61,6 +68,8 @@
             <div metal:define-slot="inside" tal:replace="structure text">The body</div>
           </div>
         </div>
+
+
         <div>
           <ul class="congress-image">
               <li>
@@ -74,6 +83,9 @@
               </li>
           </ul>
         </div>
+
+
+
       </div>
 
         <div tal:replace="structure provider:plone.belowcontentbody" />
