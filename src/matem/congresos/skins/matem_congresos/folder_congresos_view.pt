@@ -30,8 +30,8 @@
                        tal:condition="exists:item_object/image_thumb"
                        tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url)">
                         <img tal:attributes="src string:${item_object/absolute_url}/image; alt item/pretty_title_or_id" />
-                    </a>
-                      <p class="congress-title" tal:content="item_object/Title" />
+
+                      <p class="congress-title" tal:content="item_object/Title" /></a>
                       <p class="congress-date" tal:content="item_object/prety_date" />
                       <p class="congress-place" tal:content="item_object/eventplace" />
                   </li>
