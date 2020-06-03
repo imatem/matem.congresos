@@ -24,5 +24,12 @@
         class=".semanary_congress.SemanaryCongressView"
     />
 
+  <browser:page
+      for="Products.ATContentTypes.content.newsitem.ATNewsItem"
+      name="newsitem_view"
+      class=".newsitem_view.NewsItemView"
+      template="newsitem_view.pt"
+      permission="zope.Public"
+      />
 
 </configure>
