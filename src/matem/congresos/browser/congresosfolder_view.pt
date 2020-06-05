@@ -30,7 +30,7 @@
 
                       <p class="congress-title" tal:content="item_title_or_id" /></a>
                       <p class="congress-date" tal:content="item_object/prety_date" />
-                      <p class="congress-place" tal:content="item_object/eventplace" />
+                      <p class="congress-place" tal:content="python:view.eventplace(item_object)" />
                   </li>
                 </tal:congreso>
 

@@ -17,3 +17,10 @@ class CongresosFolderView(BrowserView):
             sort_on='start',
             sort_order='descending')
         return brains
+
+    def eventplace(self, congress):
+        try:
+            return congress.eventplace
+        except AttributeError :
+            return None
+
