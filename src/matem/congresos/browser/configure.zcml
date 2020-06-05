@@ -32,4 +32,12 @@
       permission="zope.Public"
       />
 
+  <browser:page
+      for="Products.ATContentTypes.content.folder.ATFolder"
+      name="congresosfolder_view"
+      class=".congresosfolder_view.CongresosFolderView"
+      template="congresosfolder_view.pt"
+      permission="zope.Public"
+      />
+
 </configure>
