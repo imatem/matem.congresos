@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+from plone import api
 from Products.Archetypes.atapi import DateTimeField
 from Products.Archetypes.atapi import StringWidget
 from Products.Archetypes.atapi import CalendarWidget
@@ -154,6 +156,10 @@ class Congreso(newsitem.ATNewsItem):
             errors['endDate'] = u'La fecha de término debe ser posterior a la de inicio'
 
     def prety_date(self):
-        return "Del %s al %s de %s de %s" % (self.startDate.day(), self.endDate.day(), self.endDate.Month(), self.endDate.year())
+        month = api.portal.translate(
+            self.endDate.Month(),
+            lang='es',
+            domain='matem.event')
+        return "Del %s al %s de %s de %s" % (self.startDate.day(), self.endDate.day(), month, self.endDate.year())
 
 atapi.registerType(Congreso, PROJECTNAME)
