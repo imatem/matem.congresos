@@ -70,7 +70,7 @@
                     <img tal:attributes="src string:$here_url/image; alt here/pretty_title_or_id" />
                 </a>
                   <p class="congress-title" tal:content="here/Title" />
-                  <p class="congress-place" tal:content="here/eventplace" />
+                  <p class="congress-place" tal:content="python:view.eventplace(context)" />
               </li>
           </ul>
         </div>
