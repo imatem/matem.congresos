@@ -8,11 +8,10 @@
   <!-- -*- extra stuff goes here -*- -->
 
   <browser:page
-      for="*"
+      for="matem.congresos.content.congreso.Congreso"
       name="congresos_view"
       class=".congresosview.congresosView"
       template="congresosview.pt"
-      allowed_interface=".congresosview.IcongresosView"
       permission="zope.Public"
       />
 
@@ -24,5 +23,28 @@
         class=".semanary_congress.SemanaryCongressView"
     />
 
+  <browser:page
+      for="Products.ATContentTypes.content.newsitem.ATNewsItem"
+      name="newsitem_view"
+      class=".newsitem_view.NewsItemView"
+      template="newsitem_view.pt"
+      permission="zope.Public"
+      />
+
+  <browser:page
+      for="Products.ATContentTypes.content.folder.ATFolder"
+      name="congresosfolder_view"
+      class=".congresosfolder_view.CongresosFolderView"
+      template="congresosfolder_view.pt"
+      permission="zope.Public"
+      />
+
+  <browser:page
+      for="Products.ATContentTypes.content.folder.ATFolder"
+      name="newsfolder_view"
+      class=".newsfolder_view.NewsFolderView"
+      template="newsfolder_view.pt"
+      permission="zope.Public"
+      />
 
 </configure>
