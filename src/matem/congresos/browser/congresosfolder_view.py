@@ -12,6 +12,7 @@ class CongresosFolderView(BrowserView):
     def __init__(self, context, request):
         self.context = context
         self.request = request
+        self.range = 'min'
 
     def foldercontents(self):
         folders = api.content.find(
@@ -23,7 +24,7 @@ class CongresosFolderView(BrowserView):
         if folders:
             brains = api.content.find(
                 context=self.context,
-                start={'query':DateTime('2021/01/01 00:00:00 UTC'), 'range':'min'},
+                start={'query':DateTime('%s/01/01 00:00:00 UTC' % self.current_year()), 'range': self.range},
                 sort_on='start',
                 sort_order='descending')
             return brains
@@ -34,12 +35,22 @@ class CongresosFolderView(BrowserView):
             sort_order='descending')
         return brains
 
-
-
-
     def eventplace(self, congress):
         try:
             return congress.eventplace
         except AttributeError :
             return None
 
+    def current_year(self):
+        return DateTime().year()
+
+
+
+class CongresosPreviousView(CongresosFolderView):
+    """
+    """
+
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+        self.range = 'max'

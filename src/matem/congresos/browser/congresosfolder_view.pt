@@ -15,6 +15,22 @@
   <metal:content-core fill-slot="content-core">
     <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
       <metal:entries fill-slot="entries">
+
+
+
+      <ul style="text-align: end; color: #2C4E78; font-size: 16px; font-family: 'Open Sans'; margin-bottom: 5px;" tal:define="year python:view.current_year()">
+        <span tal:condition="python: 'min' == view.range">
+          <li class="formTab firstFormTab" id="li_pastevents">
+              <a href="previous">anteriores a <span tal:content="year"/> </a>
+          </li>
+        </span>
+        <span tal:condition="python: 'max' == view.range">
+          <li class="formTab lastFormTab" id="li_upcomingevents">
+              <a tal:define="parent_url here/absolute_url" tal:attributes="href parent_url"> posteriores a <span tal:content="python: int(year) -1"/> </a>
+          </li>
+        </span>
+      </ul>
+
         <tal:orden tal:define="batch python:view.foldercontents()">
           <ul class="grid-container">
             <metal:block use-macro="context/folder_listing/macros/entries">
