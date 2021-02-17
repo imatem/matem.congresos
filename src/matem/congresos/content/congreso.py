@@ -170,7 +170,7 @@ class Congreso(newsitem.ATNewsItem):
             self.endDate.Month(),
             lang='es',
             domain='matem.event')
-        return "Del %s de %s al %s de %s" % (self.startDate.day(), month, self.endDate.day(), last_month)
+        return "Del %s de %s al %s de %s de %s" % (self.startDate.day(), month, self.endDate.day(), last_month, self.endDate.year())
 
 
 atapi.registerType(Congreso, PROJECTNAME)
