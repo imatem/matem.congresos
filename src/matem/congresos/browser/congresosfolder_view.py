@@ -24,6 +24,7 @@ class CongresosFolderView(BrowserView):
         if folders:
             brains = api.content.find(
                 context=self.context,
+                portal_type='Congreso',
                 start={'query':DateTime('%s/01/01 00:00:00 UTC' % self.current_year()), 'range': self.range},
                 sort_on='start',
                 sort_order='descending')

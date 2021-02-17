@@ -26,7 +26,7 @@
         </span>
         <span tal:condition="python: 'max' == view.range">
           <li class="formTab lastFormTab" id="li_upcomingevents">
-              <a tal:define="parent_url here/absolute_url" tal:attributes="href parent_url"> posteriores a <span tal:content="python: int(year) -1"/> </a>
+              <a tal:define="parent_url here/absolute_url" tal:attributes="href parent_url"> posteriores a <span tal:content="python: int(year)"/> </a>
           </li>
         </span>
       </ul>
