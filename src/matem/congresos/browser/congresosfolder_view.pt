@@ -32,6 +32,9 @@
       </ul>
 
         <tal:orden tal:define="batch python:view.foldercontents()">
+          <span tal:condition="python: len(batch) == 0">
+            <a class="collage_event_date">Sin actividades</a>
+          </span>
           <ul class="grid-container">
             <metal:block use-macro="context/folder_listing/macros/entries">
                 <metal:entry fill-slot="entry">
