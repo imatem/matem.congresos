@@ -161,7 +161,7 @@ class Congreso(newsitem.ATNewsItem):
         month = api.portal.translate(
             self.startDate.Month(),
             lang='es',
-            domain='matem.event')
+            domain='matem.event').lower()
         if samedate:
             return '%s de %s de %s' % (self.startDate.day(), month, self.endDate.year())
         if samemonth:
