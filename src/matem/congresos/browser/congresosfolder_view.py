@@ -19,8 +19,6 @@ class CongresosFolderView(BrowserView):
             depth=1,
             context=self.context,
             portal_type='Folder')
-
-
         if folders:
             brains = api.content.find(
                 context=self.context,
@@ -32,6 +30,7 @@ class CongresosFolderView(BrowserView):
 
         brains = api.content.find(
             context=self.context,
+            portal_type='Congreso',
             sort_on='start',
             sort_order='descending')
         return brains
