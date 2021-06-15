@@ -55,4 +55,12 @@
       permission="zope.Public"
       />
 
+  <browser:page
+      for="Products.ATContentTypes.content.folder.ATFolder"
+      name="divulgacionfolder_view"
+      class=".congresosfolder_view.CongresosFolderView"
+      template="divulgacionfolder_view.pt"
+      permission="zope.Public"
+      />
+
 </configure>
