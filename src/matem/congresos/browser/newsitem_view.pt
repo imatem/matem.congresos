@@ -7,6 +7,21 @@
       i18n:domain="plone">
 <body>
 
+<metal:meta fill-slot="head_slot">
+    <!-- Facebook metatags -->
+
+    <meta property="og:url"          content=""  tal:attributes="content context/@@plone_context_state/object_url" />
+    <meta property="og:title"        content=""  tal:attributes="content context/title" />
+    <meta property="og:description"  content=""  tal:attributes="content here/Description"/>
+    <meta property="og:image"        content="" tal:define="here_url context/@@plone_context_state/object_url;"
+      tal:attributes="content string:$here_url/image"/>
+    <meta property="og:image:alt"    content="" tal:attributes="content context/imageCaption"/>
+    <meta property="og:image:width"  content="990" />
+    <meta property="og:image:height" content="660" />
+    <meta property="og:type"         content="website" />
+    <meta property="og:site_name" content="Instituto de Matemáticas, UNAM">
+</metal:meta>
+
 
 <div metal:fill-slot="main">
   <tal:main-macro metal:define-macro="main"
