@@ -40,15 +40,18 @@
                 <metal:entry fill-slot="entry">
                   <tal:congreso tal:define="item_object item/getObject;">
                     <li tal:attributes="class python:'border_'+item.review_state">
-                      <a href="#"
+                      <!-- <a href="#"
                           tal:condition="exists:item_object/image_thumb"
                           tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url">
                           <img tal:attributes="src string:${item_object/absolute_url}/image; alt item/pretty_title_or_id" />
-                      </a>
+                      </a> -->
+                      <img tal:attributes="src string:${item_object/absolute_url}/image; alt item/pretty_title_or_id" />
                       <a href="#"
+                          tal:condition="python:view.canedit(item_object)"
                           tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url">
                         <p class="congress-title" tal:content="item_title_or_id" />
                       </a>
+                      <p tal:condition="python:not view.canedit(item_object)" class="congress-title" tal:content="item_title_or_id" />
                       <p class="congress-date" tal:content="item_object/prety_date" />
                       <p class="congress-place" tal:content="python:view.eventplace(item_object)" />
                     </li>

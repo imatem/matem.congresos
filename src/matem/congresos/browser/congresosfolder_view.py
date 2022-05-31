@@ -41,6 +41,13 @@ class CongresosFolderView(BrowserView):
         except AttributeError :
             return None
 
+
+    def canedit(self, congress):
+        if not api.user.is_anonymous():
+            current = api.user.get_current()
+            return api.user.has_permission('Edit', username=current.id, obj=congress)
+        return False
+
     def current_year(self):
         return DateTime().year()
 
