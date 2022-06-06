@@ -52,6 +52,9 @@ class CongresosFolderView(BrowserView):
         return DateTime().year()
 
 
+    def link(self, item):
+        return item.eventUrl 
+
 
 class CongresosPreviousView(CongresosFolderView):
     """

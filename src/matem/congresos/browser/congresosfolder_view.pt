@@ -45,7 +45,12 @@
                           tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url">
                           <img tal:attributes="src string:${item_object/absolute_url}/image; alt item/pretty_title_or_id" />
                       </a> -->
+<a href="#"
+tal:condition="exists:item_object/image_thumb"
+tal:attributes="href python:view.link(item_object)">
                       <img tal:attributes="src string:${item_object/absolute_url}/image; alt item/pretty_title_or_id" />
+</a>
+
                       <a href="#"
                           tal:condition="python:view.canedit(item_object)"
                           tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url">
