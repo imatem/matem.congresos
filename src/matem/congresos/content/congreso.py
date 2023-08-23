@@ -37,7 +37,7 @@ CongresoSchema = newsitem.ATNewsItemSchema.copy() + atapi.Schema((
                   widget=CalendarWidget(
                         description='',
                         label=_(u'label_event_start', default=u'Event Starts'),
-                        show_hm=False,
+                        show_hm=True,
                         )),
 
     DateTimeField('endDate',
@@ -50,7 +50,7 @@ CongresoSchema = newsitem.ATNewsItemSchema.copy() + atapi.Schema((
                   widget=CalendarWidget(
                         description = '',
                         label = _(u'label_event_end', default=u'Event Ends'),
-                        show_hm=False,
+                        show_hm=True,
                         )),
 
     StringField('eventUrl',
